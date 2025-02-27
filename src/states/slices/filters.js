@@ -4,7 +4,6 @@ const initialState = {
     type: '',
     ratting: '',
     status: '',
-    min_score: '',
 }
 
 const filterSlice = createSlice({
