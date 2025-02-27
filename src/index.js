@@ -5,6 +5,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import RoutesComponent from './routes';
 import { store } from './states/stores';
+import { Sticker } from './styles';
+import sticker from './images/sticker.png';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +14,7 @@ root.render(
     <Provider store={store}>
     <RoutesComponent />
     </Provider>
+    <Sticker src={sticker} />
   </React.StrictMode>
 );
 
