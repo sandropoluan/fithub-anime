@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import filterReducer from './slices/filters';
+import filter from './slices/filters';
+import pagination from './slices/pagination';
+import animeList from './slices/animeList';
 
 export const store = configureStore({
     reducer: {
-        filter: filterReducer,
+        filter,
+        pagination,
+        animeList,
     }
 });
