@@ -1,5 +1,6 @@
 import React from "react";
+import { Container } from "./styles";
 
 export default function Index() {
-    return <div>Landing Page</div>
+    return <Container>Landing Page test</Container>
 }
