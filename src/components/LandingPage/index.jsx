@@ -1,9 +1,9 @@
 import React from "react";
 import { Container } from "./styles";
-import Mascot from '../Mascot';
+import LandingSearch from "../LandingSearch";
 
 export default function Index() {
     return <Container>
-        <Mascot />
+      <LandingSearch />
     </Container>
 }
