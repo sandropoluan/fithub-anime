@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    position: relative;
     padding: 8px;
     width: 200px;
     height: 340px;
@@ -38,3 +39,38 @@ export const Title = styled.span`
     max-height: 3em; 
     line-height: 1.5em; 
 `
+
+export const TypeTag = styled.span`
+    padding: 4px 6px;
+    background-color: #000;
+    font-size: 12px;
+    color: #FFF;
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    font-weight: 800;
+    border-radius: 4px;
+`;
+
+export const RatingTag = styled.span`
+    padding: 4px 6px;
+    background-color: rgba(255,255,255, 0.7);
+    font-size: 9px;
+    color: #000000;
+    position: absolute;
+    top: 32px;
+    right: -3px;
+    font-weight: 800;
+    border-radius: 4px;
+`;
+
+export const Durationtag = styled.span`
+    padding: 4px 6px;
+    font-size: 9px;
+    color: #000000;
+    position: absolute;
+    bottom: 4px;
+    right: -3px;
+    font-weight: 800;
+    border-radius: 4px;
+`;

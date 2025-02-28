@@ -8,9 +8,9 @@ export default function Index() {
     return <Wrapper>
         <Container>
             <TextInput />
-            <Filter>
+            {/* <Filter>
                 <FilterIcon src={filterIcon} />
-            </Filter>
+            </Filter> */}
             <Search>
                 <SearchIcon src={searchIcon} />
             </Search>
