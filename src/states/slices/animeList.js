@@ -5,7 +5,7 @@ const animeListSlice = createSlice({
     initialState: [],
     reducers: {
         setList(state, action){
-            state = action.payload;
+            return action.payload;
         }
     }
 });

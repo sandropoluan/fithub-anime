@@ -16,7 +16,7 @@ const paginationSlice = createSlice({
     initialState,
     reducers: {
         setPaginationData(state, action) {
-            state = action.payload;
+            return action.payload;
         }
     }
 });
