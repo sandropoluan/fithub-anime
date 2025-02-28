@@ -16,14 +16,11 @@ const filterSlice = createSlice({
         },
         setFilter(state, action) {
             const { key, value } = action.payload;
-            state = {
-                ...state,
-                [key]: value,
-            }
+            state[key] = value;
         }
     }
 });
 
-export const { reducers, resetFilter } = filterSlice.actions;
+export const { setFilter, resetFilter } = filterSlice.actions;
 export default filterSlice.reducer;
 

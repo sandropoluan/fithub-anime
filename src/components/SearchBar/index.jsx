@@ -1,10 +1,12 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo } from "react";
 import filterIcon from '../../images/icon-filter.png';
 import searchIcon from '../../images/search.png';
 import FilterPanel from '../../components/FilterPanel';
 import { Container, Filter, FilterIcon, Search, SearchIcon, TextInput, Wrapper, FunMode, FunLabel, CheckBox } from "./styles";
 import { useDispatch, useSelector } from "react-redux";
 import { setFunMode } from "../../states/slices/app";
+import debounce from "../../utils/debounce";
+import { setFilter } from "../../states/slices/filters";
 
 export default function Index() {
     const funMode = useSelector(state => state.app.funMode);
@@ -14,9 +16,16 @@ export default function Index() {
         dispatch(setFunMode(!funMode))
     }, [funMode]);
 
+    const onChange = useMemo(() => {
+        return debounce((e) => {
+            const value = e.target.value;
+            dispatch(setFilter({key: 'q', value}))
+        }, 1000)
+    }, []);
+
     return <Wrapper>
         <Container>
-            <TextInput />
+            <TextInput onChange={onChange}/>
             <FunMode>
                 <FunLabel>Fun mode?</FunLabel>
                 <CheckBox type="checkbox" checked={funMode} onChange={toggle}/>
