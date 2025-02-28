@@ -4,6 +4,7 @@ import { setPaginationData } from "../../states/slices/pagination";
 import { Container } from './styles';
 import { setList } from "../../states/slices/animeList";
 import { useDispatch } from "react-redux";
+import AnimeCard from "../AnimeCard";
 
 
 
@@ -18,7 +19,7 @@ export default function AnimeListContainer({getList}){
     return <Container>
         {
             data.map(item=> {
-                
+                return <AnimeCard key={item.mal_id} data={item} />
             })
         }
     </Container>

@@ -15,6 +15,6 @@ export default function Index() {
                 <SearchIcon src={searchIcon} />
             </Search>
         </Container>
-        <FilterPanel />
+        {/* <FilterPanel /> */}
     </Wrapper>
 }
