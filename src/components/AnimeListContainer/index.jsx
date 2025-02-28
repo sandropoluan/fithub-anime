@@ -18,8 +18,8 @@ export default function AnimeListContainer({getList}){
 
     return <Container>
         {
-            data.map(item=> {
-                return <AnimeCard key={item.mal_id} data={item} />
+            data.map((item, i)=> {
+                return <AnimeCard key={`${item.mal_id}-${item.title}-${i}`} data={item} />
             })
         }
     </Container>

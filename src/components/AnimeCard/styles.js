@@ -21,9 +21,13 @@ export const Container = styled.div`
 `;
 
 
-export const Image = styled.img`
+export const Image = styled.div`
+    width: 100%;
     height: 250px;
+    object-fit: cover;
     border-radius: 5px 5px 0 0;
+    background-image: url(${props => props.src});
+    overflow-x: hidden;
 `;
 
 export const Title = styled.span`

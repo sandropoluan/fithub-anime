@@ -52,3 +52,26 @@ export const Search = styled.div`
 export const SearchIcon = styled.img`
     width: 25px;
 `;
+
+export const FunMode = styled.div`
+    width: 50px;
+    height: 40px;
+    background-color: #E4C8AE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const FunLabel = styled.div`
+    font-size: 8px;
+    color: #FFFFFF;
+`;
+
+export const CheckBox = styled.input`
+    width: 18px;
+    height: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+`

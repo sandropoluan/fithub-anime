@@ -1,7 +1,7 @@
 const memo = {};
 
 export async function getAnimeList(filterParams) {
-    const key = filterParams.toString();
+    const key = JSON.stringify(filterParams);
     if(key in memo) return memo[key];
 
     const keys = Object.keys(filterParams);
