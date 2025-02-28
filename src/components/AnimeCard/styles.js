@@ -11,6 +11,12 @@ export const Container = styled.div`
     align-items: center;
     border-radius: 10px;
     border: 2px #E4C8AE solid;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.1);
+    }
 `;
 
 
