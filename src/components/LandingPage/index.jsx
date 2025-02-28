@@ -8,6 +8,7 @@ import { getAnimeList } from "../../utils/api";
 import Pagination from "../Pagination";
 
 export default function LandingPage() {
+  useSelector(store => store.app.lastForceUpdate);
   const q = useSelector(store => store.filter.q);
   const page = useSelector(store => store.app.currentActivePage);
   const funMode = useSelector(store => store.app.funMode);

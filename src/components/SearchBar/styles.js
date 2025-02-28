@@ -47,6 +47,7 @@ export const Search = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 `;
 
 export const SearchIcon = styled.img`

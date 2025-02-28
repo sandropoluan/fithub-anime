@@ -1,10 +1,8 @@
 import React, { useCallback, useMemo } from "react";
-import filterIcon from '../../images/icon-filter.png';
 import searchIcon from '../../images/search.png';
-import FilterPanel from '../../components/FilterPanel';
-import { Container, Filter, FilterIcon, Search, SearchIcon, TextInput, Wrapper, FunMode, FunLabel, CheckBox } from "./styles";
+import { Container, Search, SearchIcon, TextInput, Wrapper, FunMode, FunLabel, CheckBox } from "./styles";
 import { useDispatch, useSelector } from "react-redux";
-import { setFunMode } from "../../states/slices/app";
+import { forceUpdate, setFunMode, setPage } from "../../states/slices/app";
 import debounce from "../../utils/debounce";
 import { setFilter } from "../../states/slices/filters";
 
@@ -13,30 +11,33 @@ export default function Index() {
     const dispatch = useDispatch();
 
     const toggle = useCallback(() => {
-        dispatch(setFunMode(!funMode))
+        dispatch(setFunMode(!funMode));
+        dispatch(setPage(1));
     }, [funMode]);
 
     const onChange = useMemo(() => {
         return debounce((e) => {
             const value = e.target.value;
-            dispatch(setFilter({key: 'q', value}))
+            dispatch(setFilter({ key: 'q', value }))
+            dispatch(setPage(1));
         }, 1000)
+    }, []);
+
+    const onSearch = useCallback(() => {
+        dispatch(forceUpdate());
+        dispatch(setPage(1));
     }, []);
 
     return <Wrapper>
         <Container>
-            <TextInput onChange={onChange}/>
+            <TextInput onChange={onChange} />
             <FunMode>
                 <FunLabel>Fun mode?</FunLabel>
-                <CheckBox type="checkbox" checked={funMode} onChange={toggle}/>
+                <CheckBox type="checkbox" checked={funMode} onChange={toggle} />
             </FunMode>
-            {/* <Filter>
-                <FilterIcon src={filterIcon} />
-            </Filter> */}
-            <Search>
+            <Search onClick={onSearch}>
                 <SearchIcon src={searchIcon} />
             </Search>
         </Container>
-        {/* <FilterPanel /> */}
     </Wrapper>
 }
