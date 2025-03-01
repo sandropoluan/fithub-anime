@@ -60,7 +60,7 @@ function DetailComponent({ getDetail }) {
         <Synopsis>{data.synopsis}</Synopsis>
         {!!trailerEmbedURL && <>
             <SectionTitle>Watch Trailer</SectionTitle>
-            <YoutubeIframe width="560" height="315" src={trailerEmbedURL} title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></YoutubeIframe>
+            <YoutubeIframe  src={trailerEmbedURL} title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></YoutubeIframe>
         </>}
 
 

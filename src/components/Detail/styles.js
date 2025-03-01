@@ -4,7 +4,7 @@ export const Container = styled.div`
     width: 100%;
     max-width: 1200px;
     padding: 16px;
-    margin: 0 auto;
+    margin: 0 auto 25px auto;
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 0.6);
 `;
@@ -37,7 +37,11 @@ export const Synopsis = styled.div`
     padding: 8px;
     background-color: rgba(221, 170, 123, 0.15);
 `
-export const YoutubeIframe = styled.iframe``;
+export const YoutubeIframe = styled.iframe`
+    width: 500px;
+    max-width: 100%;
+    height: 315px;
+`;
 
 export const InfosContainer = styled.div`
     margin-top: 12px;
