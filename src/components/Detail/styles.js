@@ -32,7 +32,11 @@ export const SectionTitle = styled.h2`
     color:rgb(221, 170, 123);
 `
 
-export const Synopsis = styled.div``
+export const Synopsis = styled.div`
+    width: 100%;
+    padding: 8px;
+    background-color: rgba(221, 170, 123, 0.15);
+`
 export const YoutubeIframe = styled.iframe``;
 
 export const InfosContainer = styled.div`
@@ -43,7 +47,7 @@ export const InfosContainer = styled.div`
 
 export const InfoTag = styled.span`
     padding: 4px 6px;
-    background-color: rgb(89, 104, 120);;
+    background-color: rgb(89, 104, 120);
     font-size: 12px;
     color: #FFF;
     font-weight: 800;
@@ -62,3 +66,9 @@ export const Back = styled.img`
     width: 50px;
     cursor: pointer;
 `;
+
+export const Duration = styled.div`
+    margin-top: 12px;
+    font-size: 12px;
+    text-decoration: underline;
+`
