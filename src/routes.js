@@ -4,7 +4,7 @@ import LandingPage from './components/LandingPage';
 import Detail from './components/Detail';
 
 export default function RoutesComponent() {
-   return <BrowserRouter>
+   return <BrowserRouter basename="/fithub-anime">
         <Routes>
             <Route index element={<LandingPage/>} />
             <Route path='detail/:id' element={<Detail/>} />
