@@ -1,8 +1,9 @@
-import React, { Suspense, use } from "react";
-import { useParams } from "react-router-dom";
-import { Container, Title, Image, SectionTitle, Synopsis, YoutubeIframe } from "./styles";
+import React, { Suspense, use, useCallback } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { Container, Title, Image, SectionTitle, Synopsis, YoutubeIframe, InfosContainer, InfoTag, Producers, Back } from "./styles";
 import Loading from "../Loading";
 import { getAnimeDetail } from "../../utils/api";
+import back from '../../images/left-chevron.png';
 
 
 export default function Detail() {
@@ -21,14 +22,36 @@ function DetailComponent({ getDetail }) {
 
     const trailerEmbedURL = data?.trailer?.embed_url;
 
+    const toYear = data.aired.prop.to.year;
+
+    const navigate = useNavigate()
+
+    const onClickBack = useCallback(() => {
+        navigate('../');
+    }, [])
+
     return <Container>
-        <Title>{data.title}</Title>
+        <Back src={back} onClick={onClickBack}/>
+        <Title>{data.title} - {data.title_japanese} <span className="year">({data.aired.prop.from.year}{!!toYear && ` - ${toYear}`})</span></Title>
+        <Producers>
+            {data.producers.map(item => item.name).join(', ')}
+        </Producers>
         <Image src={data.images.webp.large_image_url} />
+
+        <InfosContainer>
+            <InfoTag>{data.type}</InfoTag>
+
+            <InfoTag>{data.source}</InfoTag>
+
+            {!!data.episodes && <InfoTag>Episodes: {data.episodes}</InfoTag>}
+
+            {!!data.rating && <InfoTag>Rating: {data.rating}</InfoTag>}
+        </InfosContainer>
+
         <SectionTitle>Synopsis</SectionTitle>
         <Synopsis>{data.synopsis}</Synopsis>
         {!!trailerEmbedURL && <>
             <SectionTitle>Watch Trailer</SectionTitle>
-
             <YoutubeIframe width="560" height="315" src={trailerEmbedURL} title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></YoutubeIframe>
         </>}
     </Container>

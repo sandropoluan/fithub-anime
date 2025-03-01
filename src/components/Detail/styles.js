@@ -9,8 +9,14 @@ export const Container = styled.div`
     background-color: rgba(255, 255, 255, 0.6);
 `;
 
-export const Title = styled.h1`
+export const Title = styled.div`
+    margin-top: 20px;
     font-size: 24px;
+    font-weight: 800;
+
+    > .year{
+        color: rgba(0, 0, 0, 0.5);
+    }
 `;
 
 export const Image = styled.img`
@@ -28,3 +34,31 @@ export const SectionTitle = styled.h2`
 
 export const Synopsis = styled.div``
 export const YoutubeIframe = styled.iframe``;
+
+export const InfosContainer = styled.div`
+    margin-top: 12px;
+    width: 100%;
+    display: flex;
+`;
+
+export const InfoTag = styled.span`
+    padding: 4px 6px;
+    background-color: rgb(89, 104, 120);;
+    font-size: 12px;
+    color: #FFF;
+    font-weight: 800;
+    border-radius: 4px;
+    margin-right: 8px;
+`;
+
+ export const Producers = styled.div`
+    margin-bottom: 24px;
+    font-size: 12px;
+    padding-left: 8px;
+ `;
+
+
+export const Back = styled.img`
+    width: 50px;
+    cursor: pointer;
+`;
