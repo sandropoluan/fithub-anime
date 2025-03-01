@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/fithub-anime/static/css/main.42d82fd1.css",
-    "main.js": "/fithub-anime/static/js/main.83e17ad8.js",
+    "main.js": "/fithub-anime/static/js/main.d0ec466a.js",
     "static/js/453.bb9e80b5.chunk.js": "/fithub-anime/static/js/453.bb9e80b5.chunk.js",
     "static/media/header.png": "/fithub-anime/static/media/header.cceda78275a2e04cc96c.png",
     "static/media/sticker.png": "/fithub-anime/static/media/sticker.a43d959027e59605c1da.png",
     "static/media/loading.gif": "/fithub-anime/static/media/loading.9a77f8f9194ffb449da1.gif",
     "index.html": "/fithub-anime/index.html",
     "main.42d82fd1.css.map": "/fithub-anime/static/css/main.42d82fd1.css.map",
-    "main.83e17ad8.js.map": "/fithub-anime/static/js/main.83e17ad8.js.map",
+    "main.d0ec466a.js.map": "/fithub-anime/static/js/main.d0ec466a.js.map",
     "453.bb9e80b5.chunk.js.map": "/fithub-anime/static/js/453.bb9e80b5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.42d82fd1.css",
-    "static/js/main.83e17ad8.js"
+    "static/js/main.d0ec466a.js"
   ]
 }
