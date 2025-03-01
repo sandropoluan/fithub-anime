@@ -21,3 +21,18 @@ export async function getAnimeList(filterParams) {
         throw (e)
     }
 }
+
+const memoDetail = {};
+
+export async function getAnimeDetail(id) {
+    if(id in memoDetail) return memoDetail[id];
+
+    try {
+        const res = await fetch(`https://api.jikan.moe/v4/anime/${id}`);
+        const json = await res.json();
+        memoDetail[id] = json;
+        return json;
+    } catch (e) {
+        throw (e)
+    }
+}
