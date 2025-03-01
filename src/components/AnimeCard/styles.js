@@ -18,6 +18,14 @@ export const Container = styled.div`
     &:hover{
         transform: scale(1.1);
     }
+
+    @media (max-width: 466px) {
+      flex: 45%;
+      margin: 0 0px 8px 4px;
+      &:hover{
+        transform: none;
+      }
+    }
 `;
 
 
@@ -27,7 +35,9 @@ export const Image = styled.div`
     object-fit: cover;
     border-radius: 5px 5px 0 0;
     background-image: url(${props => props.src});
-    overflow-x: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 `;
 
 export const Title = styled.span`
