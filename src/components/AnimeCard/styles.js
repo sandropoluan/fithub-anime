@@ -38,6 +38,7 @@ export const Image = styled.div`
     background-position: center center;
     background-repeat: no-repeat;
     overflow: hidden;
+    background-size: auto 250px;
 `;
 
 export const Title = styled.span`
