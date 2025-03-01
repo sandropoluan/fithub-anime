@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimeCard matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-FEMpB gPlbnh"
+  >
+    <span
+      class="sc-fLDLck hEZIaG"
+    >
+      TV
+    </span>
+    <span
+      class="sc-dycHyt eWkOvD"
+    >
+      PG-13
+    </span>
+    <span
+      class="sc-jbAkgO hA-DFUm"
+    >
+      24 min per ep
+    </span>
+    <div
+      class="sc-gjcoXW gSlUhQ"
+      role="img"
+      src="https://example.com/image.jpg"
+    />
+    <span
+      class="sc-dVBluf iInBLV"
+    >
+      Anime Title
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-FEMpB gPlbnh"
+  >
+    <span
+      class="sc-fLDLck hEZIaG"
+    >
+      TV
+    </span>
+    <span
+      class="sc-dycHyt eWkOvD"
+    >
+      PG-13
+    </span>
+    <span
+      class="sc-jbAkgO hA-DFUm"
+    >
+      24 min per ep
+    </span>
+    <div
+      class="sc-gjcoXW gSlUhQ"
+      role="img"
+      src="https://example.com/image.jpg"
+    />
+    <span
+      class="sc-dVBluf iInBLV"
+    >
+      Anime Title
+    </span>
+  </div>
+</DocumentFragment>
+`;

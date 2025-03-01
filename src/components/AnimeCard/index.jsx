@@ -16,7 +16,7 @@ export default function AnimeCard({data}){
         {type && <TypeTag>{type}</TypeTag>}
         <RatingTag>{rating}</RatingTag>
         <Durationtag>{duration}</Durationtag>
-        <Image src={webp.image_url}/>
+        <Image role="img" src={webp.image_url}/>
         <Title>{title}</Title>
     </Container>
 }
